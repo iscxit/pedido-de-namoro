@@ -1,0 +1,144 @@
+/* Importa fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000; /* fundo preto */
+  color: #e91e63; /* rosa */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  background-color: #1a001a; /* roxo/preto suave */
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #e91e63bb;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #ff4081; /* rosa mais forte */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+p, .resposta {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #f48fb1; /* rosa claro */
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2.5px solid #e91e63;
+  box-shadow: 0 0 8px #e91e63aa;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px 8px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #ff79a3;
+}
+
+.countdown {
+  font-size: 1.3em;
+  margin: 18px 0;
+  font-weight: 600;
+  color: #ff4081;
+}
+
+.surpresa {
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #f06292;
+  background-color: #33001a;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px #e91e6380;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Canvas corações */
+canvas#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal da galeria */
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.85);
+}
+
+#modal-img {
+  margin: 10% auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #e91e63cc;
+  cursor: pointer;
+}
+
+/* Texto digitando */
+#typing {
+  font-size: 1.2rem;
+  color: #f48fb1;
+  min-height: 70px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}

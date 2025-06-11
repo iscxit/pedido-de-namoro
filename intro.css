@@ -1,0 +1,87 @@
+body {
+  background-color: #000;
+  color: #e91e63;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.envelope {
+  background-color: #1a001a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #e91e63cc;
+  max-width: 400px;
+  position: relative;
+}
+
+.envelope h1 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.envelope p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff79a3;
+}
+
+/* Novo coração batendo — orientação corrigida */
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: #ff69b4;
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 25px);
+  transform: rotate(-45deg);
+  animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #ff69b4;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart::after {
+  left: 25px;
+  top: 0;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+}
