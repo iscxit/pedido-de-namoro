@@ -26,6 +26,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 12px #e91e63bb;
   text-align: center;
+  width: 100%;
 }
 
 h1, h2 {
@@ -46,6 +47,7 @@ p, .resposta {
   justify-content: center;
   gap: 12px;
   margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 
 .gallery img {
@@ -141,4 +143,41 @@ canvas#hearts {
   min-height: 70px;
   margin-bottom: 20px;
   font-weight: 400;
+}
+
+/* 📱 RESPONSIVIDADE para telas menores */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .gallery {
+    gap: 8px;
+  }
+
+  .gallery img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  p, .resposta, #typing {
+    font-size: 1rem;
+  }
+
+  .countdown {
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  #modal-img {
+    max-width: 90%;
+  }
 }
