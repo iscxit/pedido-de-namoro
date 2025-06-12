@@ -1,67 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quer namorar comigo?</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Uma cartinha pra você 💌</title>
+  <link rel="stylesheet" href="intro.css">
 </head>
 <body>
-  <canvas id="hearts"></canvas>
-
-  <div class="container">
-    <h1 class="romantic-font">
-      Você é a razão do meu viver, obrigado por entrar na minha vida💖
-    </h1>
-
-    <p class="intro">
-      Essa é uma pequena surpresa feita com todo o meu carinho só pra você. 💖
-    </p>
-
-    <!-- Contagem regressiva interativa -->
-    <div id="countdown" class="countdown">Carregando surpresa...</div>
-
-    <!-- Galeria clicável -->
-    <div class="gallery">
-      <!-- INSIRA SUAS FOTOS AQUI -->
-      <img src="fotos/imgfoto1.jpeg" alt="Foto 1" onclick="openModal(this)" />
-      <img src="fotos/imgfoto2.jpeg" alt="Foto 2" onclick="openModal(this)" />
-      <img src="fotos/imgfoto3.jpeg" alt="Foto 3" onclick="openModal(this)" />
-    </div>
-
-    <!-- Modal da galeria -->
-    <div id="modal" class="modal" onclick="closeModal()">
-      <img id="modal-img" src="" alt="Foto ampliada" />
-    </div>
-
-    <!-- Letra com efeito de digitação (substitui texto fixo) -->
-    <div class="letter animated-box">
-      <p id="typing"></p>
-      <p>Então, com todo o meu coração, eu quero te perguntar:</p>
-    </div>
-
-    <h2 class="question">Quer namorar comigo?</h2>
-
-    <div class="buttons">
-      <button onclick="responder('sim')">SIM 💖</button>
-      <button onclick="responder('claro')">CLARO QUE SIM! 💍</button>
-    </div>
-
-    <p id="resposta" class="resposta"></p>
-
-    <div id="surpresa" class="surpresa hidden">
-      🎉 Surpresa extra desbloqueada! Eu te amo demais! 💌
-    </div>
-
-    <!-- Botão para salvar como PDF/imagem -->
+  <div class="envelope">
+    <div class="heart"></div>
+    <h1>💌 Para o amor da minha vida</h1>
+    <p>Tem uma surpresinha te esperando...</p>
+    <button onclick="abrirSurpresa()">Abrir</button>
   </div>
 
-  <audio autoplay loop>
-    <source src="audios/Michael Jackson - Heaven Can Wait [Tradução⧸Legendado].mp3" type="audio/mpeg" />
-    Seu navegador não suporta áudio.
-  </audio>
-
-  <script src="script.js"></script>
+  <script>
+    function abrirSurpresa() {
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
